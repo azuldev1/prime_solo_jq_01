@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+html{
+  background-color: #2F7F6C;
+}
+
+.empList{
+  padding: 20px 0 0 20px;
+  width: inherit;
+
+  display: inline-block;
+
+}
+.empList h1{
+  font-family: 'Raleway', sans-serif;
+  display: inline;
+
+}
+
+/** form button link button made with http://css3buttongenerator.com/
+* couldnt use button element because it was tied to form submit action, couldn't figure out how to select element
+**/
+#empButton {
+
+  margin-left: 440px;
+
+
+}
+
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 3px 1px 12px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  background: #B2421F;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #CC9837;
+  text-decoration: none;
+}
+
+/* wrapper form / list */
+#formWrapper{
+
+  background-color: #ABFFEA;
+  margin: 20px auto;
+  width: 800px;
+  height: 680px;
+  border-radius: 15px;
+}
+
+
+
+
+
+/* form styling */
+a{
+  text-decoration: none;
+}
+/* css for pop_up window for form */
+a.selected {
+z-index:100;
+}
+/* css for pop_up window for form  cancel*/
+a.close {
+margin-left: 40px;
+color: #B22D1F;
+}
+a.close:hover {
+
+color: ##CC9837;
+}
+/*style the form pop up window*/
+.messagepop {
+  background-color:#FFFFFF;
+  border: 2px solid #FF895F;
+  cursor:default;
+  display:none;
+  margin: 20px auto 0;
+  position:relative;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 15px 20px 10px;
+  border-radius: 30px;
+}
+form {
+  text-align: center;
+
+}
+label {
+  text-align: left;
+  display: inline;
+  margin-bottom: 3px;
+  margin-right: 15px;
+  text-indent: -15px;
+}
+input{
+
+  border-radius: 6px;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+#sM{
+  color: #ffffff;
+  background: #B22D1F;
+}
+#sM:hover{
+  background: #CC9837;
+}
+
+/*appended employees*/
+ul {
+  border: 2px solid #FF895F;
+  width: 180px;
+  height: 160px;
+  padding: 10px 10px 5px;
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: white;
+}
+
+
+ul:nth-of-type(3n + 0) {
+    margin-right: 20px;
+    clear: right;
+}
+ul:nth-of-type(1n + 4) {
+    margin-left: 20px;
+}
+li{
+  width: 100%;
+  display: inline-block;
+  list-style-type: none;
+  padding-bottom: 5px;
+  text-align: left;
+}
+/*color coding employee rating*/
+.review1{
+  background: rgba(255,0,0,0.4);
+  border-radius: 3px;
+}
+.review2{
+  background: rgba(255, 99, 0, 0.36);
+  border-radius: 3px;
+}
+.review3{
+  background: rgba(242, 255, 0, 0.36);
+  border-radius: 3px;
+}
+.review4{
+  background: rgba(135, 255, 0, 0.36);
+  border-radius: 3px;
+}
+.review5{
+  background: rgba(19, 215, 80, 0.45);
+  border-radius: 3px;
+}
+
+#content{
+    margin: 0 auto;
+    text-align: center;
+
+    position: relative;
+}
+/*delete Employee*/
+button.del {
+  margin-top: 1px;
+  margin-left: 120px;
+  color: black;
+}
+button.del:hover {
+background-color: #FF855F;
+}

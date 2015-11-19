@@ -26,17 +26,9 @@ $(function() {
 
 });
 
-
-
-
-
 $.fn.slideFadeToggle = function(easing, callback) {
-  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+  return this.animate({opacity: 'toggle', height: 'toggle'}, 'fast', easing, callback);
 };
-
-
-
-
 
 /*$('form#newEmployee').on('submit', 'button', function(){
   var submitVal = $('#newEmployee'.value)

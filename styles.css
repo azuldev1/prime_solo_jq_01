@@ -5,15 +5,13 @@ html{
 }
 
 .empList{
-  padding: 20px 0 0 20px;
-  width: inherit;
-
-  display: inline-block;
-
+width: 100%;
+display: inline-block;
 }
 .empList h1{
   font-family: 'Raleway', sans-serif;
   display: inline;
+  margin-left: 10%;
 
 }
 
@@ -22,8 +20,8 @@ html{
 **/
 #empButton {
 
-  margin-left: 440px;
-
+  margin-left: 70%;
+  display: inline;
 
 }
 
@@ -49,9 +47,9 @@ html{
 #formWrapper{
 
   background-color: #ABFFEA;
-  margin: 20px auto;
+  margin: 5% auto;
   width: 800px;
-  height: 680px;
+  height: 200%;
   border-radius: 15px;
 
 }
@@ -139,7 +137,6 @@ input{
 ul {
   border: 2px solid #FF895F;
   width: 170px;
-  height: 160px;
   padding: 10px 10px 5px;
   margin-left: 10px;
   display: inline-block;

@@ -11,36 +11,36 @@
     <title></title>
   </head>
   <body>
-
+    <div class="empList">
+      <h1>EMPLOYEE LIST</h1>
+      <a href="/contact" class = 'btn' id="empButton">New Employee</a>
+    </div>
   <div id = "formWrapper">
-          <section class="empList">
-            <h1>EMPLOYEE LIST</h1>
-            <a href="/contact" class = 'btn' id="empButton">New Employee</a>
-          </section>
+
           <div class="overlay"></div>
           <div id = "formWindow" class="messagepop pop add">
                   <form id="newEmployee">
-                        <label for="firstName">Name:</label>
+                        <label for="firstName"><b>Name:</b></label>
                         <input id = "fN" type="text" placeholder="First Name" name="firstName" required></input>
                         <br>
-                        <label for="lastName">Last Name:</label>
+                        <label for="lastName"><b>Last Name:</b></label>
                         <input id = "lN" type="text" placeholder="Last Name" name="lastName" required></input>
                         <br>
-                        <label for="employeeNum">Employee Number:</label>
+                        <label for="employeeNum"><b>Employee Number:</b></label>
                         <input id = "eN" type="numeric" placeholder="Employee #" name="employeeNum" required></input>
                         <br>
-                        <label for="employeeTitle">Title:</label>
+                        <label for="employeeTitle"><b>Title:</b></label>
                         <input id = "eT" type="text" placeholder="Title" name="employeeTitle" required></input>
                         <br>
                         <label for="lastReview">Last Review Score:</label>
 
                         <input id = "lR" type="number" name="lastReview" min="1" max="5">
                         <br>
-                        <label for="employeeSalary">Employee Salary:</label>
+                        <label for="employeeSalary"><b>Employee Salary:</b></label>
                         <input id = "eS" type="text" placeholder="Salary" name="employeeSalary" required></input>
                         <br>
                         <input  id = "sM" type="submit" value="submit"></input>
-                        <a class="close" href="/">cancel</a>
+                        <a class="close" href="/"><b>cancel</b></a>
                   </form>
             </div>
 
@@ -52,7 +52,7 @@
               <li>Name: {{firstName}} {{lastName}}</li>
               <li>Employee ID: {{employeeNum}}</li>
               <li>Title: {{employeeTitle}}</li>
-              <li>Review: {{lastReview}}</li>
+              <li class="review{{lastReview}}">Review: {{lastReview}}</li>
               <li><button class ='button del'>Delete</button></li>
             </ul>
                   {{/each}}

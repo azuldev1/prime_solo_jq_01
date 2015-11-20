@@ -101,15 +101,24 @@ $(document).ready(function(){
         list.addEmployee(new Employee(firstName, lastName, employeeNum, employeeTitle, lastReview, employeeSalary ));
         // clear existing data from the form
   		    $(this)[0].reset();
+
+
   		// Pass our data to the template
   		  compiledHtml = template({employees: list.getList()});
   		// Add the compiled html to the page
   		  $('.employees').append(compiledHtml);
-
-    });
-
+      });
 });
 
+
+//       if (elem.name === 'lastReview') {
+//         var $li = $('<li>');
+//         var cNum = parseInt(elem.value);
+//         $li.text('Latest Employee Review: ' + elem.value);
+//         $('#content ul:last-child').append($li);
+//         $li.addClass('review' + cNum);
+//
+//       }
 
 
 

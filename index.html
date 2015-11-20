@@ -19,9 +19,6 @@
           </section>
           <div id = "formWindow" class="messagepop pop add">
                   <form id="newEmployee">
-
-                    <script id = 'employee-form' type="text/x-handlers-template">
-
                         <label for="firstName">Name:</label>
                         <input id = "fN" type="text" placeholder="First Name" name="firstName" required></input>
                         <br>
@@ -29,22 +26,20 @@
                         <input id = "lN" type="text" placeholder="Last Name" name="lastName" required></input>
                         <br>
                         <label for="employeeNum">Employee Number:</label>
-                        <input id = "eM" type="numeric" placeholder="Employee #" name="employeeNum" required></input>
+                        <input id = "eN" type="numeric" placeholder="Employee #" name="employeeNum" required></input>
                         <br>
                         <label for="employeeTitle">Title:</label>
                         <input id = "eT" type="text" placeholder="Title" name="employeeTitle" required></input>
                         <br>
                         <label for="lastReview">Last Review Score:</label>
 
-                        <input type="number" name="lastReview" min="1" max="5">
+                        <input id = "lR" type="number" name="lastReview" min="1" max="5">
                         <br>
                         <label for="employeeSalary">Employee Salary:</label>
                         <input id = "eS" type="text" placeholder="Salary" name="employeeSalary" required></input>
                         <br>
-                        <input  id = "sM" type="submit" value="Submit"></input>
-
+                        <input  id = "sM" type="submit" value="submit"></input>
                         <a class="close" href="/">cancel</a>
-                    </script>
                   </form>
             </div>
 
@@ -57,7 +52,7 @@
               <li>Employee ID: {{employeeNum}}</li>
               <li>Title: {{employeeTitle}}</li>
               <li>Review: {{lastReview}}</li>
-              <li><button class = 'button'>Delete</button></li>
+              <li><button class ='button del'>Delete</button></li>
             </ul>
                   {{/each}}
             </script>

@@ -63,7 +63,12 @@ function Employee(firstName, lastName, employeeNum, employeeTitle, lastReview, e
 
 
  }
-
+ /* binds remove() to the button clicked & removes closest ul from the DOM*/
+function delButton(){
+  $('#content').on('click', 'button', function() {
+            $(this).closest('ul').remove();
+  });
+}
 $(document).ready(function(){
   var list = new EmployeeList();
 
@@ -74,16 +79,35 @@ $(document).ready(function(){
 
     // create template for displaying employees
  	  var employeeTemplate = $('#employee-list').html();
-
     // Compile the template
     var template = Handlebars.compile(employeeTemplate);
-
     // Pass our data to the template
     var compiledHtml = template({employees: list.getList()});
-
-
     // Add the compiled html to the page
     $('.employees').append(compiledHtml);
+    // call the deletButton function
+    delButton();
+
+    /** ------------ FORM SUBMISSION --------------- **/
+    $('form').on('submit', function(e){
+      e.preventDefault();
+        firstName = $('#fN').val();
+        lastName = $('#lN').val();
+        employeeNum = $('#eN').val();
+        employeeTitle = $('#eT').val();
+        lastReview = $('#lR').val();
+        employeeSalary = $('#eS').val();
+
+        list.addEmployee(new Employee(firstName, lastName, employeeNum, employeeTitle, lastReview, employeeSalary ));
+        // clear existing data from the form
+  		    $(this)[0].reset();
+  		// Pass our data to the template
+  		  compiledHtml = template({employees: list.getList()});
+  		// Add the compiled html to the page
+  		  $('.employees').append(compiledHtml);
+
+    });
+
 });
 
 

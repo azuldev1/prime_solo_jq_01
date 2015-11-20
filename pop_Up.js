@@ -10,17 +10,25 @@ function deselect(e) {
 
 $(function() {
   $('#empButton').on('click', function() {
+
     if($(this).hasClass('selected')) {
       deselect($(this));
+
     } else {
       $(this).addClass('selected');
       $('.pop').slideFadeToggle();
+
     }
     return false;
   });
+/* added overlay on click event*/
 
+    $('#empButton').on('click', function(){
+      $(".overlay").toggle();
+    });
   $('.close').on('click', function() {
     deselect($('#empButton'));
+    $(".overlay").toggle();
     return false;
   });
 

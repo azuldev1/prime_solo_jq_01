@@ -63,7 +63,7 @@ function Employee(firstName, lastName, employeeNum, employeeTitle, lastReview, e
 
 
  }
- /* binds remove() to the button clicked & removes closest ul from the DOM*/
+ /* binds remove() to the button clicked & removes closest ul from the */
 function delButton(){
   $('#content').on('click', 'button', function() {
             $(this).closest('ul').remove();
